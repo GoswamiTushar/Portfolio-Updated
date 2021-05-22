@@ -121,15 +121,6 @@ body {
     font-size: x-large;
   }
 }
-@media only screen and (max-width: 675px) {
-  .container-item h1 {
-    font-size: 1.2rem;
-  }
-  .about {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
 @media only screen and (max-width: 803px) {
   .about > .container {
     /* grid-template-columns: repeat(1, minmax(0,1fr)); */
@@ -138,5 +129,24 @@ body {
   }
   .about > div.about-para {
     margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .container-item h1 {
+    font-size: 1.2rem;
+  }
+  .about {
+    /* margin-left: 1rem; */
+    /* margin-right: 1rem; */
+    padding: 10px;
+  }
+  .container {
+    padding: 2px;
+  }
+  .about > .container {
+    /* grid-template-columns: repeat(1, minmax(0,1fr)); */
+    grid-template-rows: auto auto;
+    /* grid-template-columns: auto; */
   }
 }
