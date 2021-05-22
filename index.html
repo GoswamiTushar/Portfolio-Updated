@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tushar's Portfolio</title>
+    <link rel="shortcut icon" type="image/jpg" href="./Images/favicon.png"/>
+  </head>
+  <body>
+    <nav style="width:100vw;position: absolute; z-index: 99;">
+    <div class="container" style="background-color: white;">
+          
+        <div
+          class="container-item font-formatted-2"
+          style="grid-column-start: 1; grid-column-end: 1; justify-content: left;"
+        >
+          <h1>TUSHAR GOSWAMI</h1>
+        </div>
+        <div class="container-item" style="grid-column-start: 2;justify-content: center;">
+              <img src="./Images/logo-grey.png" height="50px" width="45px">
+          </div>
+        <div class="container-item" style="grid-column-start: 3; justify-content: right;">
+          <div class="menu" id="menu-button" onclick="checkClicked">
+            <div class="hidden-letter">M</div>
+            <div class="menu-button" id="to-hide-1"></div>
+            <div class="menu-button"></div>
+            <div class="menu-button" id="to-hide-2"></div>
+            <div class="hidden-letter">N</div>
+            <div class="hidden-letter">U</div>
+          </div>
+        </div>
+          <div
+            class="container-item" id="links"
+            style="grid-column-start:2;"
+          >
+            <ul class="font-formatted-2" style="font-weight: 100">
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">RESUME</a></li>
+              <li><a href="#">CONTACT ME</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="about container-item" style="">
+        <div class="container" id="changing-background" style="border-radius: 30px; background-color: white; padding: 2rem 0px 0px 0px; margin-top:10rem;">
+            <div class="profile-photo" style="display: flex;justify-content: center;align-items: center;">
+                <img src="./Images/about-photo.jpg" style=""></div>
+            <div class="container-item" style="padding-bottom:2rem">
+              <div class="about-para font-formatted-2">
+                <h1>ABOUT ME</h1>
+                <div class="divider-grey"></div>
+                <p style="font-weight:100;">Hi! My name is Tushar Goswami.<br>
+                  I'm a Second Year Student pursuing my B.tech degree in Computer Science<br>
+                  from GLA University, Mathura. I mainly have interest in Data Driven fields like Data Engineer & Data Science.<br>
+                  We have a startup, naming The Caryatid Automations PVT. LTD. based on Home automation ideas in very low cost.<br>
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+  <script src="./script.js"></script>
+</html>
