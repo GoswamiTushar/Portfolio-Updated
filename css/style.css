@@ -123,6 +123,7 @@ body {
   }
 
   .container-item > h1 {
+    font-size: 0.8rem;
     font-weight: 900;
     -webkit-transition: ease-in-out;
     -webkit-transition: -webkit-transform 1s;
@@ -130,8 +131,8 @@ body {
   }
 
   .container-item img {
-    width: 40px;
-    height: 47px;
+    width: 30px;
+    height: 35px;
     -webkit-transition: ease-in-out;
     -webkit-transition: -webkit-transform 1s;
     transition: all 1s;
