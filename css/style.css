@@ -95,7 +95,7 @@ body {
 
 @media only screen and (max-width: 450px) {
   .name-heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #lan-title {
@@ -110,6 +110,10 @@ body {
     font-size: 3rem;
   }
 
+  #lan-desc > p {
+    font-size: 1rem;
+  }
+
   span p {
     font-size: x-small;
   }
@@ -122,8 +126,11 @@ body {
     padding: 0 0rem 0 0rem;
   }
 
-  .container-item > h1 {
+  .nav-container > .container-item > h1 {
     font-size: 0.8rem;
+  }
+
+  .container-item > h1 {
     font-weight: 900;
     -webkit-transition: ease-in-out;
     -webkit-transition: -webkit-transform 1s;
