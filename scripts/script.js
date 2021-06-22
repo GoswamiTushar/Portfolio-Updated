@@ -52,3 +52,17 @@ document.getElementById("menu-button").addEventListener("click", () => {
   }
   menuButtonClicked = !menuButtonClicked;
 });
+
+// Modal block
+
+var modalOpen = document.getElementById("open-modal");
+var modalClose = document.getElementById("close-modal");
+var modalBox = document.getElementById("modal");
+
+modalOpen.addEventListener("click", () => {
+  modalBox.classList.toggle("modal-visibility");
+});
+
+modalClose.addEventListener("click", () => {
+  modalBox.classList.toggle("modal-visibility");
+});
