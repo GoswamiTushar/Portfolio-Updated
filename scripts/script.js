@@ -1,3 +1,17 @@
+// Menu button code block
+var menuButtonClicked = false;
+
+document.getElementById("menu-button").addEventListener("click", () => {
+  if (menuButtonClicked === false) {
+    document.getElementById("hidden-item").style.display = "block";
+  } else if (menuButtonClicked) {
+    document.getElementById("hidden-item").style.display = "none";
+  }
+  menuButtonClicked = !menuButtonClicked;
+});
+
+// tech stack section code
+
 const techBG = {
   Python: "url(../images/projects/low-qual/bg1.png)",
   WebD: "url(../images/projects/low-qual/bg2.png)",
@@ -42,16 +56,7 @@ function changeBackground() {
   setTimeout(changeBackground, 3000);
 }
 
-var menuButtonClicked = false;
 
-document.getElementById("menu-button").addEventListener("click", () => {
-  if (menuButtonClicked === false) {
-    document.getElementById("hidden-item").style.display = "block";
-  } else if (menuButtonClicked) {
-    document.getElementById("hidden-item").style.display = "none";
-  }
-  menuButtonClicked = !menuButtonClicked;
-});
 
 // Modal block
 
