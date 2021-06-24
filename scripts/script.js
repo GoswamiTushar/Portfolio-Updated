@@ -1,4 +1,6 @@
 // Menu button code block
+
+
 var menuButtonClicked = false;
 
 document.getElementById("menu-button").addEventListener("click", () => {
@@ -8,6 +10,21 @@ document.getElementById("menu-button").addEventListener("click", () => {
     document.getElementById("hidden-item").style.display = "none";
   }
   menuButtonClicked = !menuButtonClicked;
+});
+
+
+// Modal block
+
+var modalOpen = document.getElementById("open-modal");
+var modalClose = document.getElementById("close-modal");
+var modalBox = document.getElementById("modal");
+
+modalOpen.addEventListener("click", () => {
+  modalBox.classList.toggle("modal-visibility");
+});
+
+modalClose.addEventListener("click", () => {
+  modalBox.classList.toggle("modal-visibility");
 });
 
 // tech stack section code
@@ -29,45 +46,46 @@ const techDesc = {
     "Currently dedicating time to learn ReactJS and build apps along with tutorials",
 };
 
+const projects = {
+  Python: ["Twitter Scraper", "SEO Tags Scraper", "Automating Online Classes", ""],
+  WebD: ["Portfolio Website", "Minions Language Translate", "Snake Game"],
+  Java: ["Data Structures and Algorithms", "Competitive Coding"],
+  IoT: ["Smart Water Management System", "", ""],
+  ReactJS: ["Will start working on projects soon"],
+}
+
 const BGs = Object.keys(techBG);
 
 var count = 0;
 changeBackground();
 
 function changeBackground() {
-  if (count === BGs.length) {
-    count = 0;
-  } else if (count < BGs.length) {
-    document.getElementById("tech-stack").style.backgroundImage =
-      techBG[BGs[count]];
 
-    document.getElementById("lan-title").innerHTML = `
-    <h1 class="font-formatted-2" style="color: rgb(54, 54, 54)">
-    ${BGs[count]}
-    <div class="divider-grey"></div>
-    </h1>`;
+  var modalIsOpen = modalBox.classList.contains("modal-visibility");
 
-    document.getElementById("lan-desc").innerHTML = `
-    <p class="font-formatted-1" style="color: rgb(54, 54, 54); font-weight: 000">
-    ${techDesc[BGs[count]]}</p>`;
+  if(modalIsOpen){
+    if (count === BGs.length) {
+      count = 0;
+    } else if (count < BGs.length) {
+      document.getElementById("tech-stack").style.backgroundImage =
+        techBG[BGs[count]];
 
-    count += 1;
+      document.getElementById("lan-title").innerHTML = `
+      <h1 class="font-formatted-2" style="color: rgb(54, 54, 54)">
+      ${BGs[count]}
+      <div class="divider-grey"></div>
+      </h1>`;
+
+      document.getElementById("lan-desc").innerHTML = `
+      <p class="font-formatted-1" style="color: rgb(54, 54, 54); font-weight: 000">
+      ${techDesc[BGs[count]]}</p>`;
+
+      count += 1;
+    }
+  }
+
+  else{
+    count = count;
   }
   setTimeout(changeBackground, 3000);
 }
-
-
-
-// Modal block
-
-var modalOpen = document.getElementById("open-modal");
-var modalClose = document.getElementById("close-modal");
-var modalBox = document.getElementById("modal");
-
-modalOpen.addEventListener("click", () => {
-  modalBox.classList.toggle("modal-visibility");
-});
-
-modalClose.addEventListener("click", () => {
-  modalBox.classList.toggle("modal-visibility");
-});
