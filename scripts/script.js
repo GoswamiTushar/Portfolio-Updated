@@ -1,6 +1,5 @@
 // Menu button code block
 
-
 var menuButtonClicked = false;
 
 document.getElementById("menu-button").addEventListener("click", () => {
@@ -11,7 +10,6 @@ document.getElementById("menu-button").addEventListener("click", () => {
   }
   menuButtonClicked = !menuButtonClicked;
 });
-
 
 // Modal block
 
@@ -28,6 +26,10 @@ modalClose.addEventListener("click", () => {
 });
 
 // tech stack section code
+
+var languageTitleModal = document.getElementById("project-lan");
+var languageDescriptionModal = document.getElementById("project-desc");
+var listitems = document.getElementById("list-items");
 
 const techBG = {
   Python: "url(../images/projects/low-qual/bg1.png)",
@@ -47,23 +49,27 @@ const techDesc = {
 };
 
 const projects = {
-  Python: ["Twitter Scraper", "SEO Tags Scraper", "Automating Online Classes", ""],
+  Python: [
+    "Twitter Scraper",
+    "SEO Tags Scraper",
+    "Automating Online Classes",
+    "",
+  ],
   WebD: ["Portfolio Website", "Minions Language Translate", "Snake Game"],
   Java: ["Data Structures and Algorithms", "Competitive Coding"],
   IoT: ["Smart Water Management System", "", ""],
   ReactJS: ["Will start working on projects soon"],
-}
+};
 
 const BGs = Object.keys(techBG);
 
 var count = 0;
-changeBackground();
+ChangeData();
 
-function changeBackground() {
-
+function ChangeData() {
   var modalIsOpen = modalBox.classList.contains("modal-visibility");
 
-  if(modalIsOpen){
+  if (modalIsOpen) {
     if (count === BGs.length) {
       count = 0;
     } else if (count < BGs.length) {
@@ -80,12 +86,26 @@ function changeBackground() {
       <p class="font-formatted-1" style="color: rgb(54, 54, 54); font-weight: 000">
       ${techDesc[BGs[count]]}</p>`;
 
+      languageTitleModal.innerHTML = `
+      <h1 class="font-formatted-2" style="color: rgb(54, 54, 54)">
+      ${BGs[count]}
+      <div class="divider-grey"></div>
+      </h1>
+      `;
+
+      var projectsArr = projects[BGs[count]];
+      listitems.innerHTML = "";
+
+      for (i = 0; i < projectsArr.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = projectsArr[i];
+        listitems.appendChild(li);
+      }
+
       count += 1;
     }
-  }
-
-  else{
+  } else {
     count = count;
   }
-  setTimeout(changeBackground, 3000);
+  setTimeout(ChangeData, 3000);
 }

@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
 
 .font-formatted-2 {
   font-family: "Oswald", sans-serif;
+}
+
+.formatted-list {
+  list-style: none;
 }
 
 .divider-grey {
@@ -117,7 +122,7 @@ body {
   background: White;
   border-radius: 30px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 8fr;
   width: 50vw;
   height: 80vh;
 }
@@ -132,26 +137,63 @@ body {
   max-height: 20%;
 }
 
-.modal-content{
+.modal-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: flex-start;
 }
 
-#project-lan{
+#project-lan {
   grid-column-start: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#close-modal{
+#close-modal {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   font-weight: 1000;
   font-size: 1em;
   color: rgb(54, 54, 54);
+}
+
+.footer {
+  margin-top: 2rem;
+  background: white;
+  height: auto;
+  box-shadow: 1px 0px 20px rgb(218, 218, 218);
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.footer > .one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > .two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer > .two > ul {
+  list-style: none;
+}
+
+.footer > .two > ul > li {
+  display: inline;
+  justify-content: space-evenly;
+  font-size: small;
+}
+
+.footer > .two > ul > li > a > img {
+  width: 30px;
+  height: 30px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -256,6 +298,6 @@ body {
 
   .modal {
     height: 70vh;
-    width: 80vw;
+    width: 87vw;
   }
 }
