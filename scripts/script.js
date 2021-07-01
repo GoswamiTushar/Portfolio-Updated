@@ -53,12 +53,69 @@ const projects = {
     "Twitter Scraper",
     "SEO Tags Scraper",
     "Automating Online Classes",
-    "",
+    "Coursera Course Projects",
   ],
-  WebD: ["Portfolio Website", "Minions Language Translate", "Snake Game"],
+  WebD: [
+    "Portfolio Website",
+    "Minions Language Translate",
+    "Ferb-Latin Translator",
+    "Snake Game",
+    "Club Website",
+    "JS CLI App",
+  ],
   Java: ["Data Structures and Algorithms", "Competitive Coding"],
   IoT: ["Smart Water Management System", "", ""],
-  ReactJS: ["Will start working on projects soon"],
+  ReactJS: ["ToDo app", "EmojiPedia", "Movie Recommendation"],
+};
+
+const projectLinks = {
+  "Twitter Scraper": ["https://github.com/GoswamiTushar/Twitter-Scraper", ""],
+  "SEO Tags Scraper": ["https://github.com/GoswamiTushar/Keywords-scraper", ""],
+  "Automating Online Classes": [
+    "https://github.com/GoswamiTushar/OnlineClass-Automation",
+    "",
+  ],
+  "Portfolio Website": [
+    "https://github.com/GoswamiTushar/Portfolio-Updated",
+    "http://portfoliotushargoswami.netlify.app/",
+  ],
+  "Minions Language Translate": [
+    "https://github.com/GoswamiTushar/Minions-Translator",
+    "https://admiring-babbage-26ef01.netlify.app/",
+  ],
+  "Snake Game": ["", ""],
+  "Smart Water Management System": [
+    "https://github.com/GoswamiTushar/Smart-Water-Management-System",
+    "",
+  ],
+  "ToDo app": [
+    "https://github.com/GoswamiTushar/TodoReactJS-CWH/tree/main/my-app",
+    "",
+  ],
+  "Club Website": [
+    "https://github.com/GoswamiTushar/abacus-frontend",
+    "https://abacusglau.netlify.app",
+  ],
+  "Movie Recommendation": [
+    "https://github.com/GoswamiTushar/Movie-recommendation",
+    "https://zen-sinoussi-d2637f.netlify.app/",
+  ],
+  "Coursera Course Projects": [
+    "https://github.com/GoswamiTushar/Coursera-Projects",
+    "",
+  ],
+  "JS CLI App": [
+    "https://github.com/GoswamiTushar/NeoGCampCLI",
+    "https://replit.com/@GoswamiTushar/Mark-2",
+  ],
+  EmojiPedia: [
+    "https://github.com/GoswamiTushar/ReactJS",
+    "https://stupefied-nightingale-b3c037.netlify.app/",
+  ],
+  "Ferb-Latin Translator": [
+    "https://github.com/GoswamiTushar/Ferb-latin",
+    "https://friendly-panini-891123.netlify.app/",
+  ],
 };
 
 const BGs = Object.keys(techBG);
@@ -98,7 +155,30 @@ function ChangeData() {
 
       for (i = 0; i < projectsArr.length; i++) {
         var li = document.createElement("li");
-        li.innerHTML = projectsArr[i];
+        var project = projectsArr[i];
+        try {
+          if (projectLinks[project][1] !== "") {
+            li.innerHTML = `
+          <div style="font-size: 1.5rem">${project}</div>
+          <div style="justify-content: space-between">
+            <a style="margin-right: 20px" href=${projectLinks[project][0]} target="_blank">Source Link</a>
+            <a href=${projectLinks[project][1]} target="_blank">Live Example</a>
+          </div>
+        `;
+          } else if (projectLinks[project][1] === "") {
+            li.innerHTML = `
+          <div style="font-size: 1.5rem">${project}</div>
+          <div style="justify-content: space-between">
+            <a href=${projectLinks[project][0]} target="_blank">Source Link</a>
+          </div>
+        `;
+          } else {
+            continue;
+          }
+        } catch {
+          continue;
+        }
+
         listitems.appendChild(li);
       }
 

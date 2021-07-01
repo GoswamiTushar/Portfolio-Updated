@@ -139,7 +139,8 @@ body {
 
 .modal-content {
   display: flex;
-  justify-content: left;
+  margin-top: 1rem;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -186,9 +187,9 @@ body {
 }
 
 .footer > .two > ul > li {
-  display: inline;
+  display: grid;
+  grid-template-rows: auto auto;
   justify-content: space-evenly;
-  font-size: small;
 }
 
 .footer > .two > ul > li > a > img {
