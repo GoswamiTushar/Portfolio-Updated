@@ -305,6 +305,18 @@ body {
   .about-font {
     font-size: 0.3rem;
   }
+
+  #img-class {
+    width: 140%;
+    height: auto;
+  }
+
+  .about-text {
+    font-size: 0.5em;
+  }
+  .tech-stack-font {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 450px) {
@@ -321,7 +333,7 @@ body {
 
   .about > .container-item > .name-heading {
     background: white;
-    padding: 2rem;
+    padding: 5rem;
     margin: 2rem;
     border-radius: 30px;
     box-shadow: 10px 10px 10px rgb(218, 218, 218);
@@ -340,5 +352,51 @@ body {
   .intro-para {
     font-size: 3rem;
     font-weight: 100;
+  }
+
+  #img-class {
+    width: 73%;
+    height: auto;
+  }
+
+  .about-text {
+    font-size: 2em;
+  }
+
+  #open-modal > .grid-container {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
+    background-size: 30%;
+  }
+
+  .projects {
+    margin: 4rem;
+    padding: 4rem;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgb(218 218 218);
+  }
+
+  #open-modal > .projects {
+    height: 90vh;
+  }
+
+  .tech-stack-font {
+    font-size: 2rem;
+  }
+
+  #lan-title {
+    font-size: 2rem;
+  }
+
+  #lan-desc {
+    font-size: 1.5rem;
+  }
+
+  .footer > .two > ul > li > a > img {
+    margin: 30px;
   }
 }
