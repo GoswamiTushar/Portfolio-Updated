@@ -197,6 +197,17 @@ body {
   height: 30px;
 }
 
+#close-modal :hover {
+  cursor: zoom-in;
+}
+
+.link-btn {
+  background-color: rgb(54, 54, 54);
+  color: white;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 450px) {
   .name-heading {
     font-size: 2rem;

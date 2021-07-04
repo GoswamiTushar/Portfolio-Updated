@@ -161,15 +161,15 @@ function ChangeData() {
             li.innerHTML = `
           <div style="font-size: 1.5rem">${project}</div>
           <div style="justify-content: space-between">
-            <a style="margin-right: 20px" href=${projectLinks[project][0]} target="_blank">Source Link</a>
-            <a href=${projectLinks[project][1]} target="_blank">Live Example</a>
+            <a style="margin-right: 20px" href=${projectLinks[project][0]} target="_blank"><button class="link-btn">Source Link</button></a>
+            <a href=${projectLinks[project][1]} target="_blank"><button class="link-btn">Live Example</button></a>
           </div>
         `;
           } else if (projectLinks[project][1] === "") {
             li.innerHTML = `
           <div style="font-size: 1.5rem">${project}</div>
           <div style="justify-content: space-between">
-            <a href=${projectLinks[project][0]} target="_blank">Source Link</a>
+            <a href=${projectLinks[project][0]} target="_blank"><button class="link-btn">Source Link</button></a>
           </div>
         `;
           } else {
