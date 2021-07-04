@@ -189,3 +189,9 @@ function ChangeData() {
   }
   setTimeout(ChangeData, 3000);
 }
+
+function test() {
+  alert("Click on Tech stack section to open projects");
+}
+
+setTimeout(test, 2000);
